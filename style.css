@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d0d1a;
+  background-image:
+    linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: #e0e0ff;
+  font-family: 'Share Tech Mono', monospace;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00ffff;
+  text-shadow:
+    0 0 8px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #ff00ff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+main > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+#search-input {
+  background: #0d0d1a;
+  border: 1px solid #00ffff;
+  color: #e0e0ff;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  transition: box-shadow 0.2s;
+  width: 260px;
+}
+
+#search-input::placeholder {
+  color: #556;
+}
+
+#search-input:focus {
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.7);
+}
+
+button {
+  background: transparent;
+  border: 1px solid #ff00ff;
+  color: #ff00ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.3);
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+button:hover {
+  background: #ff00ff;
+  color: #0d0d1a;
+  box-shadow: 0 0 18px rgba(255, 0, 255, 0.8);
+}
+
+#remove-gifs {
+  border-color: #ff4444;
+  color: #ff4444;
+  box-shadow: 0 0 8px rgba(255, 68, 68, 0.3);
+  font-size: 0.75rem;
+}
+
+#remove-gifs:hover {
+  background: #ff4444;
+  color: #0d0d1a;
+  box-shadow: 0 0 18px rgba(255, 68, 68, 0.8);
+}
+
+#giphy-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 960px;
+  width: 100%;
+}
+
+#giphy-container img {
+  border: 1px solid #00ffff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4), 0 0 4px rgba(255, 0, 255, 0.3);
+  max-width: 320px;
+  max-height: 320px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+#giphy-container img:hover {
+  box-shadow: 0 0 24px rgba(0, 255, 255, 0.8), 0 0 12px rgba(255, 0, 255, 0.6);
+  transform: scale(1.03);
+}
+
+#loading {
+  color: #00ffff;
+  font-size: 2rem;
+  text-shadow:
+    0 0 8px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #ff00ff;
+}
